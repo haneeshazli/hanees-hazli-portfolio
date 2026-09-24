@@ -2,8 +2,14 @@
 
 Personal portfolio site, live at **https://hanees.site**
 
-A single file: markup, styles, scripts and assets are all bundled into
-`index.html`, so there is no build step and no dependencies.
+A static site with no build step: `index.html` holds the page markup, styles
+and logic, and everything it loads lives in `assets/`:
+
+```
+assets/js/     runtime, design system, React, GSAP, ScrollTrigger, Lenis
+assets/fonts/  Inter Tight (woff2, split by unicode range)
+assets/img/    portrait, tool logos, site screenshots, AI examples (WebP)
+```
 
 ## Viewing it locally
 
@@ -38,8 +44,14 @@ git add -A && git commit -m "Update portfolio" && git push
 
 - **Do not delete `CNAME`.** It holds the custom domain; removing it unsets
   `hanees.site` in GitHub Pages.
-- `index.html` is a generated bundle (~3.3 MB). Edit it at the source that
-  produced it and re-export, rather than hand-editing the bundled file.
-- Video embeds load from Vimeo at runtime and need an internet connection.
-- The page requests `.image-slots.state.json` and gets a 404. It's a harmless
-  leftover probe from the bundler; all images are embedded in the file.
+- **Do not delete `.nojekyll`.** It tells GitHub Pages to serve the files
+  as-is instead of running them through Jekyll.
+- The page used to ship as a single 3.3 MB self-unpacking bundle. It is now
+  unpacked into `index.html` + `assets/`, so browsers can cache and
+  lazy-load each file. If you re-export from the design tool, unpack the
+  export the same way rather than committing the bundle over the top.
+- Images are sized for how they're displayed (2–3x for retina). When adding
+  one, export WebP at roughly that size rather than the full-resolution
+  original.
+- Video embeds load from Vimeo at runtime (lazily, as they near the
+  viewport) and need an internet connection.
