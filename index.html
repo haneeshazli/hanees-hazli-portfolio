@@ -1468,29 +1468,40 @@ const slot = (id, placeholder) => h('image-slot', { id, shape: 'rect', placehold
 const vimeo = (id, h_) => h('iframe', { loading: 'lazy', title: 'Showreel video', src: `https://player.vimeo.com/video/${id}?h=${h_}&background=1&muted=1&loop=1&autoplay=1`, style: { width: '100%', height: '100%', border: 'none', objectFit: 'cover' }, allow: 'autoplay; fullscreen; picture-in-picture', title: 'vimeo-player' });
 const vimeoPlayable = (id, h_, ref, key, title) => h('iframe', { key, ref, loading: 'lazy', title, src: `https://player.vimeo.com/video/${id}?h=${h_}&muted=1&autoplay=1&loop=1&controls=0&playsinline=1&byline=0&title=0&portrait=0&dnt=1`, style: { width: '100%', height: '100%', border: 'none', objectFit: 'cover', pointerEvents: 'none' }, allow: 'autoplay; fullscreen; picture-in-picture', title: 'vimeo-player' });
 
-const R = (p) => { const m = (typeof window !== 'undefined' && window.__resources) || {}; return m[String(p).replace(/[^a-z0-9]/gi,'_')] || p; };
-const shot = (src0, alt = '') => { const src = R(src0);
-  return h('img', { src, alt, loading: 'lazy', decoding: 'async', style: { width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' } }); };
+const SHOTS = {
+  'img/site-pferd-v2.png': 'assets/img/site-pferd.webp',
+  'img/site-vastiq.png': 'assets/img/site-vastiq.webp',
+  'img/site-aosis-v2.png': 'assets/img/site-aosis.webp',
+  'img/site-kirakaun.png': 'assets/img/site-kirakaun.webp',
+  'img/site-janine.png': 'assets/img/site-janine.webp',
+  'img/site-zuhal.png': 'assets/img/site-zuhal.webp',
+  'img/site-grandpride.png': 'assets/img/site-grandpride.webp',
+  'img/site-jomventures.png': 'assets/img/site-jomventures.webp',
+  'img/avatar-sheldon.png': 'assets/img/avatar-sheldon.webp',
+  'img/avatar-boutique.jpeg': 'assets/img/avatar-boutique.webp',
+  'img/avatar-diane.png': 'assets/img/avatar-diane.webp',
+};
+const shot = (src, alt = '') => h('img', { src: SHOTS[src] || src, alt, loading: 'lazy', decoding: 'async', style: { width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center', display: 'block' } });
 
 const titleCard = (s) => h('div', { style: { position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 6, background: 'radial-gradient(circle at 30% 20%, #2a2a22, #0c0c09 70%)', fontFamily: 'var(--font-display)', color: '#fff', textAlign: 'center', padding: 16 } },
   h('span', { style: { fontWeight: 800, fontSize: 24, letterSpacing: '-0.01em' } }, s.title, h('span', { style: { color: 'var(--flame)' } }, '.')),
   h('span', { style: { fontFamily: 'var(--font-mono)', fontSize: 11, color: 'rgba(255,255,255,.55)' } }, s.url));
 const SITES = [
-  { id: 'site-1', url: 'pferd.com.my', title: 'Pferd', meta: 'Equestrian Outfitters · Shah Alam', src: 'img/_sa-site-pferd.jpg' },
-  { id: 'site-2', url: 'vastiqsolutions.com', href: 'https://www.vastiqsolutions.com/', title: 'Vastiq Solutions', meta: 'AI Security & Automation · Sri Kembangan', src: 'img/_sa-site-vastiq.jpg' },
-  { id: 'site-5', url: 'aosismontkiara.com', href: 'https://aosismontkiara.com/', title: 'Aosis Mont Kiara', meta: 'Property Launch · Mont Kiara', src: 'img/_sa-site-aosis.jpg' },
-  { id: 'site-9', url: 'kirakaun.com', href: 'https://kirakaun.com/', title: 'KiraKaun', meta: 'Accounting SaaS · Malaysia', src: 'img/_sa-site-kirakaun.jpg' },
-  { id: 'site-3', url: 'thaliartw.my', href: 'https://thaliartw.my/', title: 'Thalia Atelier', meta: 'Fashion Boutique · Shah Alam' },
-  { id: 'site-4', url: 'janine.com.my', title: 'Janine', meta: 'Furniture Store · Kuala Lumpur', src: 'img/_sa-site-janine.jpg' },
-  { id: 'site-10', url: 'zuhaltraveltours.com', href: 'https://zuhaltraveltours.com/', title: 'Zuhal Travel & Tours', meta: 'Travel Agency · Malaysia', src: 'img/_sa-site-zuhal.jpg' },
-  { id: 'site-11', url: 'grandpride.com', href: 'https://www.grandpride.com/', title: 'Grand Pride', meta: 'Car Rental & Chauffeur Platform', src: 'img/_sa-site-grandpride.jpg' },
-  { id: 'site-12', url: 'jomventures.my', href: 'https://jomventures.my/', title: 'Jomventures Travel & Tours', meta: 'Travel Agency · Malaysia', src: 'img/_sa-site-jomventures.jpg' },
+  { id: 'site-1', url: 'pferd.com.my', title: 'Pferd', meta: 'Equestrian Outfitters · Shah Alam', src: 'img/site-pferd-v2.png' },
+  { id: 'site-2', url: 'vastiqsolutions.com', href: 'https://www.vastiqsolutions.com/', title: 'Vastiq Solutions', meta: 'AI Security & Automation · Sri Kembangan', src: 'img/site-vastiq.png' },
+  { id: 'site-5', url: 'aosis-mont-kiara.vercel.app', href: 'https://aosis-mont-kiara.vercel.app/', title: 'Aosis Mont Kiara', meta: 'Property Launch · Mont Kiara', src: 'img/site-aosis-v2.png' },
+  { id: 'site-9', url: 'kirakaun.com', href: 'https://kirakaun.com/', title: 'KiraKaun', meta: 'Accounting SaaS · Malaysia', src: 'img/site-kirakaun.png' },
+  { id: 'site-3', url: 'klinikdrsitidanrakan.com', href: 'https://www.klinikdrsitidanrakan.com/', title: 'Klinik Dr Siti & Rakan2', meta: 'Medical Clinic · Malaysia', src: 'img/site-kliniksiti.png' },
+  { id: 'site-4', url: 'janine.com.my', title: 'Janine', meta: 'Furniture Store · Kuala Lumpur', src: 'img/site-janine.png' },
+  { id: 'site-10', url: 'zuhaltraveltours.com', href: 'https://zuhaltraveltours.com/', title: 'Zuhal Travel & Tours', meta: 'Travel Agency · Malaysia', src: 'img/site-zuhal.png' },
+  { id: 'site-11', url: 'grandpride.com', href: 'https://www.grandpride.com/', title: 'Grand Pride', meta: 'Car Rental & Chauffeur Platform', src: 'img/site-grandpride.png' },
+  { id: 'site-12', url: 'jomventures.my', href: 'https://jomventures.my/', title: 'Jomventures Travel & Tours', meta: 'Travel Agency · Malaysia', src: 'img/site-jomventures.png' },
 ];
 const siteItem = (s) => ({
   url: s.url, title: s.title, meta: s.meta,
   href: s.href || ('https://' + s.url),
-  slot: s.src ? shot(s.src, s.title + ' homepage') : titleCard(s),
-  slotClone: s.src ? shot(s.src, '') : titleCard(s),
+  slot: SHOTS[s.src] ? shot(s.src, s.title + ' homepage') : titleCard(s),
+  slotClone: SHOTS[s.src] ? shot(s.src, '') : titleCard(s),
 });
 
 const WORK_CARDS_RAW = [
@@ -1861,9 +1872,9 @@ class Component extends DCLogic {
       slotWork1: slot('work-1', 'Drop a campaign visual'),
       slotWork2: slot('work-2', 'Drop a video still'),
       slotWork3: slot('work-3', 'Drop a campaign visual'),
-      slotAvatar1: shot('img/_sa-avatar-sheldon.jpg'),
-      slotAvatar2: shot('img/_sa-avatar-boutique.jpg'),
-      slotAvatar3: shot('img/_sa-avatar-diane.jpg'),
+      slotAvatar1: shot('img/avatar-sheldon.png'),
+      slotAvatar2: shot('img/avatar-boutique.jpeg'),
+      slotAvatar3: shot('img/avatar-diane.png'),
       workCards: WORK_CARDS_RAW.map((c, i) => ({
         category: c.category,
         title: c.title,
