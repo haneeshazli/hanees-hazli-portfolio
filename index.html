@@ -115,6 +115,60 @@
    "url": "https://hanees.site/",
    "name": "Hanees Hazli",
    "inLanguage": "en-MY"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://hanees.site/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "How much does video production cost in KL?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It depends on shoot days, locations and how many edits you need. Most business owners start with one shoot that gives them a month of reels. WhatsApp me what you need and I'll send a quote within 24 hours."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do you make property videos for developers and agents?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, most of my video work is property: launch videos, show-unit walkthroughs and reels for projects like Aosis Mont Kiara, Tuan4 Residences and Papyrus North Kiara."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How fast can you build my website?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Most sites are live within 24 hours of your brief. You get a fast, mobile-friendly site with WhatsApp built in, ready to send your ad and video traffic to."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can you run my Facebook and Instagram ads?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. I set up and manage Meta ad campaigns aimed at enquiries and sales, and I report what's working in plain language, not dashboards full of jargon."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Boleh buat video dan iklan dalam Bahasa Melayu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Boleh. Saya sediakan skrip, sari kata dan iklan dalam Bahasa Melayu, English atau kedua-duanya, ikut siapa pelanggan anda."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kawasan mana yang anda cover?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Saya berpangkalan di Kuala Lumpur dan buat penggambaran di seluruh KL dan Selangor. Laman web dan iklan Meta boleh diurus untuk bisnes di mana-mana di Malaysia."
+     }
+    }
+   ]
   }
  ]
 }
@@ -1000,6 +1054,13 @@
   .hh-nav-desktop nav > div:nth-child(2) > span { padding: 12px 22px !important; font-size: 15px !important; }
   .hh-nav-desktop nav > button { padding: 14px 10px 14px 26px !important; font-size: 15px !important; white-space: nowrap !important; }
   .hh-nav-desktop nav > button > span { width: 32px !important; height: 32px !important; }
+  .hh-faq { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); transition: border-color .2s ease; }
+  .hh-faq[open], .hh-faq:hover { border-color: var(--flame); }
+  .hh-faq summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px; font-family: var(--font-display); font-weight: 700; font-size: 16px; line-height: 1.35; color: var(--ink); }
+  .hh-faq summary::-webkit-details-marker { display: none; }
+  .hh-faq summary::after { content: "+"; flex: 0 0 28px; height: 28px; border-radius: 50%; background: var(--flame); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; transition: transform .2s ease; }
+  .hh-faq[open] summary::after { transform: rotate(45deg); }
+  .hh-faq p { margin: 0; padding: 0 20px 18px; font-size: 14px; line-height: 1.65; color: var(--muted); }
 </style>
 </helmet>
 
@@ -1038,14 +1099,14 @@
     <section id="home" class="hh-grid12" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;align-items:center">
       <div style="display:flex;flex-direction:column;gap:22px;align-items:flex-start">
         <div style="position:relative;display:inline-flex">
-          <x-import component-from-global-scope="TalmeezDesignSystem_ad0f19.Badge" variant="outline" dot="{{ true }}" hint-size="auto,34px">Open for Selected Projects</x-import>
+          <x-import component-from-global-scope="TalmeezDesignSystem_ad0f19.Badge" variant="outline" dot="{{ true }}" hint-size="auto,34px">Now booking KL &amp; Selangor projects</x-import>
           <svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="var(--flame)" stroke="var(--flame)" stroke-width="1" style="position:absolute;right:-16px;top:-10px;transform:rotate(8deg)"><path d="M4 3 20 11 12.5 12.5 11 20 4 3Z"></path></svg>
         </div>
-        <h1 style="font-family:var(--font-display);font-weight:800;font-size:clamp(38px,5.2vw,62px);line-height:1.02;letter-spacing:-0.02em;margin:0;text-wrap:balance">Marketing That <span style="color:var(--flame)">Moves</span> Numbers.</h1>
-        <p style="font-size:16px;line-height:1.6;color:var(--muted);margin:0;max-width:420px;text-wrap:pretty">I'm Hanees Hazli, a performance marketer and content producer in Kuala Lumpur. I build paid campaigns and creative that earn their spend.</p>
+        <h1 style="font-family:var(--font-display);font-weight:800;font-size:clamp(38px,5.2vw,62px);line-height:1.02;letter-spacing:-0.02em;margin:0;text-wrap:balance">Video Production That <span style="color:var(--flame)">Brings</span> You Customers.</h1>
+        <p style="font-size:16px;line-height:1.6;color:var(--muted);margin:0;max-width:420px;text-wrap:pretty">I'm Hanees Hazli. I shoot videos, build websites and run Meta ads for business owners in Kuala Lumpur and Selangor. One person from script to enquiries, and I reply on WhatsApp within 24 hours.</p>
         <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap">
           <x-import component-from-global-scope="TalmeezDesignSystem_ad0f19.Button" variant="primary" size="lg" icon="{{ true }}" hint-size="auto,48px" sc-camel-on-click="{{ scrollToWork }}">View My Work</x-import>
-          <x-import component-from-global-scope="TalmeezDesignSystem_ad0f19.Button" variant="ghost" size="lg" icon="{{ true }}" hint-size="auto,48px" href="{{ whatsappUrl }}">Hire Me</x-import>
+          <x-import component-from-global-scope="TalmeezDesignSystem_ad0f19.Button" variant="ghost" size="lg" icon="{{ true }}" hint-size="auto,48px" href="{{ whatsappUrl }}">WhatsApp Me</x-import>
         </div>
       </div>
       <div class="hh-hero-visual" style="position:relative;display:flex;justify-content:center;align-items:flex-end;min-height:360px">
@@ -1064,10 +1125,10 @@
       <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap">
         <div>
           <div style="font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--flame);margin-bottom:10px">Services</div>
-          <h2 style="font-family:var(--font-display);font-weight:800;font-size:clamp(30px,3.6vw,42px);color:#fff;margin:0;line-height:1.05">What I Do<span style="color:var(--flame)">.</span></h2>
+          <h2 style="font-family:var(--font-display);font-weight:800;font-size:clamp(30px,3.6vw,42px);color:#fff;margin:0;line-height:1.05">Videos, Websites &amp; Ads<span style="color:var(--flame)">.</span></h2>
         </div>
         <div style="display:flex;align-items:center;gap:18px">
-          <p class="hh-body-16" style="max-width:300px;font-size:14px;line-height:1.55;color:rgba(255,255,255,.55);margin:0">Full-funnel work: media buying, creative strategy and the content to feed it.</p>
+          <p class="hh-body-16" style="max-width:300px;font-size:14px;line-height:1.55;color:rgba(255,255,255,.55);margin:0">Everything you need to get noticed, get found and get enquiries, handled by one person.</p>
           <span style="width:44px;height:44px;flex:0 0 44px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;transition:background .25s ease,border-color .25s ease" style-hover="background:var(--flame);border-color:var(--flame)">
             <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
           </span>
@@ -1075,33 +1136,33 @@
       </div>
       <div class="hh-grid12" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px">
         <div style="position:relative;display:flex;flex-direction:column;gap:12px;background:#1B1B16;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:22px 22px 68px;transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s ease,border-color .25s ease" style-hover="transform:translateY(-6px);background:#222219;border-color:rgba(255,255,255,.16)">
-          <span style="width:44px;height:44px;border-radius:11px;background:var(--flame);display:flex;align-items:center;justify-content:center">{{ iconTarget }}</span>
-          <h3 style="font-family:var(--font-display);font-weight:700;font-size:19px;color:#fff;margin:14px 0 0;line-height:1.2">Paid Media</h3>
-          <p class="hh-body-16" style="font-size:13px;line-height:1.6;color:rgba(255,255,255,.55);margin:0">Meta, TikTok and Google campaigns built around CAC and ROAS targets, not vanity reach.</p>
+          <span style="width:44px;height:44px;border-radius:11px;background:var(--flame);display:flex;align-items:center;justify-content:center">{{ iconPlay }}</span>
+          <h3 style="font-family:var(--font-display);font-weight:700;font-size:19px;color:#fff;margin:14px 0 0;line-height:1.2">Video Production</h3>
+          <p class="hh-body-16" style="font-size:13px;line-height:1.6;color:rgba(255,255,255,.55);margin:0">Property walkthroughs, product videos and reels for TikTok and Instagram, shot, edited and captioned so they're ready to post.</p>
           <span style="position:absolute;right:20px;bottom:20px;width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;transition:transform .25s cubic-bezier(.16,1,.3,1)">
             <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
           </span>
         </div>
         <div style="position:relative;display:flex;flex-direction:column;gap:12px;background:#1B1B16;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:22px 22px 68px;transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s ease,border-color .25s ease" style-hover="transform:translateY(-6px);background:#222219;border-color:rgba(255,255,255,.16)">
           <span style="width:44px;height:44px;border-radius:11px;background:#fff;display:flex;align-items:center;justify-content:center">{{ iconSparkFlame }}</span>
-          <h3 style="font-family:var(--font-display);font-weight:700;font-size:19px;color:#fff;margin:14px 0 0;line-height:1.2">Creative Strategy</h3>
-          <p class="hh-body-16" style="font-size:13px;line-height:1.6;color:rgba(255,255,255,.55);margin:0">Hooks, angles and testing frameworks that keep ad accounts from fatiguing out.</p>
+          <h3 style="font-family:var(--font-display);font-weight:700;font-size:19px;color:#fff;margin:14px 0 0;line-height:1.2">Website Design</h3>
+          <p class="hh-body-16" style="font-size:13px;line-height:1.6;color:rgba(255,255,255,.55);margin:0">Fast, mobile-friendly websites that turn video views into WhatsApp enquiries. Live within 24 hours of your brief.</p>
           <span style="position:absolute;right:20px;bottom:20px;width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;transition:transform .25s cubic-bezier(.16,1,.3,1)">
             <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
           </span>
         </div>
         <div style="position:relative;display:flex;flex-direction:column;gap:12px;background:#1B1B16;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:22px 22px 68px;transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s ease,border-color .25s ease" style-hover="transform:translateY(-6px);background:#222219;border-color:rgba(255,255,255,.16)">
-          <span style="width:44px;height:44px;border-radius:11px;background:var(--flame);display:flex;align-items:center;justify-content:center">{{ iconPlay }}</span>
-          <h3 style="font-family:var(--font-display);font-weight:700;font-size:19px;color:#fff;margin:14px 0 0;line-height:1.2">Video Production</h3>
-          <p class="hh-body-16" style="font-size:13px;line-height:1.6;color:rgba(255,255,255,.55);margin:0">Shot, edited and cut for feed: UGC, product films and short-form built to convert.</p>
+          <span style="width:44px;height:44px;border-radius:11px;background:var(--flame);display:flex;align-items:center;justify-content:center">{{ iconTarget }}</span>
+          <h3 style="font-family:var(--font-display);font-weight:700;font-size:19px;color:#fff;margin:14px 0 0;line-height:1.2">Meta Ads Management</h3>
+          <p class="hh-body-16" style="font-size:13px;line-height:1.6;color:rgba(255,255,255,.55);margin:0">Facebook and Instagram campaigns aimed at leads and sales, not likes. You see where every ringgit goes.</p>
           <span style="position:absolute;right:20px;bottom:20px;width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;transition:transform .25s cubic-bezier(.16,1,.3,1)">
             <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
           </span>
         </div>
         <div style="position:relative;display:flex;flex-direction:column;gap:12px;background:#1B1B16;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:22px 22px 68px;transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s ease,border-color .25s ease" style-hover="transform:translateY(-6px);background:#222219;border-color:rgba(255,255,255,.16)">
           <span style="width:44px;height:44px;border-radius:11px;background:#fff;display:flex;align-items:center;justify-content:center">{{ iconChartFlame }}</span>
-          <h3 style="font-family:var(--font-display);font-weight:700;font-size:19px;color:#fff;margin:14px 0 0;line-height:1.2">Growth Analytics</h3>
-          <p class="hh-body-16" style="font-size:13px;line-height:1.6;color:rgba(255,255,255,.55);margin:0">Tracking, dashboards and reporting so every ringgit spent is accounted for.</p>
+          <h3 style="font-family:var(--font-display);font-weight:700;font-size:19px;color:#fff;margin:14px 0 0;line-height:1.2">Strategy &amp; Reporting</h3>
+          <p class="hh-body-16" style="font-size:13px;line-height:1.6;color:rgba(255,255,255,.55);margin:0">Hooks, angles and monthly reports that show what's working and what to do next.</p>
           <span style="position:absolute;right:20px;bottom:20px;width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;transition:transform .25s cubic-bezier(.16,1,.3,1)">
             <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="var(--flame)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"></path></svg>
           </span>
@@ -1211,7 +1272,7 @@
       <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap">
         <div>
           <div style="font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--muted);margin-bottom:10px">Selected Work</div>
-          <h2 style="font-family:var(--font-display);font-weight:800;font-size:clamp(28px,3.4vw,40px);color:var(--ink);margin:0;line-height:1.05">The Work That Paid for <span style="color:var(--flame)">Itself.</span></h2>
+          <h2 style="font-family:var(--font-display);font-weight:800;font-size:clamp(28px,3.4vw,40px);color:var(--ink);margin:0;line-height:1.05">Property Videos That Bring In <span style="color:var(--flame)">Buyers.</span></h2>
         </div>
         <div style="font-size:14px;color:var(--muted)">Real Estate</div>
       </div>
@@ -1386,7 +1447,7 @@
         <div style="display:flex;flex-direction:column;gap:16px;max-width:560px">
           <span style="align-self:flex-start;border:1px solid var(--flame);color:var(--flame);border-radius:var(--radius-pill);padding:6px 14px;font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:var(--tracking-wider);text-transform:uppercase">Client Previews</span>
           <h2 style="font-family:var(--font-display);font-weight:800;font-size:clamp(28px,3.4vw,40px);margin:0;line-height:1.08;color:#fff;text-wrap:balance">Reels get the attention. A <em style="font-style:italic;color:var(--flame)">website closes the sale.</em></h2>
-          <p class="hh-body-16" style="font-size:15px;line-height:1.6;color:rgba(255,255,255,.6);margin:0">Live sites I've built for Malaysian businesses. Hover any row to stop it and take a closer look.</p>
+          <p class="hh-body-16" style="font-size:15px;line-height:1.6;color:rgba(255,255,255,.6);margin:0">Websites I've built for businesses across KL and Selangor. Hover or tap a row to take a closer look.</p>
         </div>
         <x-import component-from-global-scope="TalmeezDesignSystem_ad0f19.Button" variant="primary" size="md" icon="{{ true }}" hint-size="auto,44px" href="{{ whatsappSitesUrl }}">View All Sites</x-import>
       </div>
@@ -1484,7 +1545,7 @@
     </section>
 
     <section style="display:flex;flex-direction:column;gap:28px">
-      <x-import component-from-global-scope="TalmeezDesignSystem_ad0f19.SectionHeader" eyebrow="Testimonials" title="Trusted by Great Clients." accent-word="Clients" hint-size="100%,120px"></x-import>
+      <x-import component-from-global-scope="TalmeezDesignSystem_ad0f19.SectionHeader" eyebrow="Testimonials" title="What Business Owners Say." accent-word="Say." hint-size="100%,120px"></x-import>
       <div class="hh-grid12" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
         <x-import component-from-global-scope="TalmeezDesignSystem_ad0f19.TestimonialCard" quote="It's rare to find someone who actually rides horses and knows how to design websites. Hans understood exactly what my equestrian brand needed without me explaining the basics, and the final site captured the sport in a way other designers just hadn't. Highly recommend if you want someone who really gets the industry." name="Sheldon Ong" role="Equestrian Brand Owner" avatar-slot="{{ slotAvatar1 }}" hint-size="100%,200px"></x-import>
         <x-import component-from-global-scope="TalmeezDesignSystem_ad0f19.TestimonialCard" quote="I've worked with a few designers before and always ended up explaining my brand from scratch. Hanees got the aesthetic right away and built something that actually looks premium, not templated. Sales through the site have noticeably picked up." name="Boutique Owner" role="Fashion &amp; Lifestyle Brand" avatar-slot="{{ slotAvatar2 }}" hint-size="100%,200px"></x-import>
@@ -1492,12 +1553,45 @@
       </div>
     </section>
 
+    <section id="faq" style="display:flex;flex-direction:column;gap:26px">
+      <div>
+        <div style="font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--flame);margin-bottom:10px">FAQ</div>
+        <h2 style="font-family:var(--font-display);font-weight:800;font-size:clamp(28px,3.4vw,40px);color:var(--ink);margin:0;line-height:1.05">Questions Business Owners <span style="color:var(--flame)">Ask.</span></h2>
+      </div>
+      <div class="hh-grid12" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px;align-items:start">
+        <details class="hh-faq">
+          <summary>How much does video production cost in KL?</summary>
+          <p>It depends on shoot days, locations and how many edits you need. Most business owners start with one shoot that gives them a month of reels. WhatsApp me what you need and I&#x27;ll send a quote within 24 hours.</p>
+        </details>
+        <details class="hh-faq">
+          <summary>Do you make property videos for developers and agents?</summary>
+          <p>Yes, most of my video work is property: launch videos, show-unit walkthroughs and reels for projects like Aosis Mont Kiara, Tuan4 Residences and Papyrus North Kiara.</p>
+        </details>
+        <details class="hh-faq">
+          <summary>How fast can you build my website?</summary>
+          <p>Most sites are live within 24 hours of your brief. You get a fast, mobile-friendly site with WhatsApp built in, ready to send your ad and video traffic to.</p>
+        </details>
+        <details class="hh-faq">
+          <summary>Can you run my Facebook and Instagram ads?</summary>
+          <p>Yes. I set up and manage Meta ad campaigns aimed at enquiries and sales, and I report what&#x27;s working in plain language, not dashboards full of jargon.</p>
+        </details>
+        <details class="hh-faq" lang="ms">
+          <summary>Boleh buat video dan iklan dalam Bahasa Melayu?</summary>
+          <p>Boleh. Saya sediakan skrip, sari kata dan iklan dalam Bahasa Melayu, English atau kedua-duanya, ikut siapa pelanggan anda.</p>
+        </details>
+        <details class="hh-faq" lang="ms">
+          <summary>Kawasan mana yang anda cover?</summary>
+          <p>Saya berpangkalan di Kuala Lumpur dan buat penggambaran di seluruh KL dan Selangor. Laman web dan iklan Meta boleh diurus untuk bisnes di mana-mana di Malaysia.</p>
+        </details>
+      </div>
+    </section>
+
     <section id="contact" class="hh-grid12" style="background:var(--peach);border:1px solid var(--border);border-radius:var(--radius-xl);padding:clamp(28px,3.4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,48px);align-items:center">
       <div style="display:flex;flex-direction:column;gap:18px;align-items:flex-start">
         <div style="font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:var(--tracking-wider);text-transform:uppercase;color:var(--flame)">Let's work together</div>
-        <h2 style="font-family:var(--font-display);font-weight:800;font-size:clamp(26px,3.2vw,38px);margin:0;line-height:1.1;text-wrap:balance">Have a campaign in <em style="font-style:italic;color:var(--flame)">mind?</em></h2>
-        <p class="hh-body-16" style="font-size:15px;line-height:1.6;color:var(--muted);margin:0;max-width:340px">Available for freelance campaigns, content retainers and website builds. Tell me the goal and I'll tell you what it takes.</p>
-        <x-import component-from-global-scope="TalmeezDesignSystem_ad0f19.Button" variant="primary" size="lg" icon="{{ true }}" hint-size="auto,48px" href="{{ whatsappUrl }}">Let's Talk</x-import>
+        <h2 style="font-family:var(--font-display);font-weight:800;font-size:clamp(26px,3.2vw,38px);margin:0;line-height:1.1;text-wrap:balance">Ready to get more <em style="font-style:italic;color:var(--flame)">enquiries?</em></h2>
+        <p class="hh-body-16" style="font-size:15px;line-height:1.6;color:var(--muted);margin:0;max-width:340px">Tell me about your business on WhatsApp. I'll reply within 24 hours with what I'd do and what it costs.</p>
+        <x-import component-from-global-scope="TalmeezDesignSystem_ad0f19.Button" variant="primary" size="lg" icon="{{ true }}" hint-size="auto,48px" href="{{ whatsappUrl }}">WhatsApp Me</x-import>
       </div>
       <div class="hh-border-l-mobile" style="display:flex;flex-direction:column;gap:20px;border-left:1px solid var(--border);padding-left:clamp(0px,2.4vw,36px)">
           <a href="mailto:haneeshazli01@gmail.com" style="display:flex;align-items:flex-start;gap:14px;text-decoration:none">
@@ -1525,7 +1619,7 @@
             <span style="width:38px;height:38px;flex:0 0 38px;border-radius:50%;background:var(--flame);display:flex;align-items:center;justify-content:center"><svg width="17" height="17" sc-camel-view-box="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span>
             <span style="display:flex;flex-direction:column;gap:2px">
               <span style="font-size:13px;font-weight:700;color:var(--ink)">Location</span>
-              <span style="font-size:14px;color:var(--muted)">Kuala Lumpur, Malaysia · Remote-friendly</span>
+              <span style="font-size:14px;color:var(--muted)">Kuala Lumpur &amp; Selangor · Websites and ads anywhere in Malaysia</span>
             </span>
           </div>
         <span style="font-size:12px;color:var(--muted)">Usually replies within 24 hours</span>
@@ -1537,7 +1631,7 @@
     <div class="hh-grid12" style="max-width:1040px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px">
       <div style="display:flex;flex-direction:column;gap:14px">
         <div style="font-family:var(--font-display);font-weight:800;font-size:24px;color:#fff;line-height:1">hanees<span style="color:var(--flame)">.</span></div>
-        <p style="font-size:13px;line-height:1.6;color:rgba(255,255,255,.55);margin:0;max-width:260px">Performance marketing and content for brands that want results they can measure.</p>
+        <p style="font-size:13px;line-height:1.6;color:rgba(255,255,255,.55);margin:0;max-width:260px">Videos, websites and Meta ads for business owners in Kuala Lumpur and Selangor.</p>
       </div>
       <div class="hh-tap-lg" style="display:flex;flex-direction:column;gap:14px">
         <div style="font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:var(--tracking-wider);text-transform:uppercase;color:rgba(255,255,255,.45)">Quick Links</div>
@@ -1554,7 +1648,7 @@
           <span style="font-size:13px;color:rgba(255,255,255,.6)">haneeshazli01@gmail.com</span>
           <span style="font-size:13px;color:rgba(255,255,255,.6)">+60 14-6059 781</span>
           <a href="https://www.linkedin.com/in/haneeshazli/" target="_blank" rel="noopener" style="font-size:13px;color:rgba(255,255,255,.6)">LinkedIn</a>
-          <span style="font-size:13px;color:rgba(255,255,255,.6)">Available remote</span>
+          <span style="font-size:13px;color:rgba(255,255,255,.6)">KL &amp; Selangor</span>
         </div>
       </div>
     </div>
