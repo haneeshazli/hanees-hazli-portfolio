@@ -1477,6 +1477,7 @@ const SHOTS = {
   'img/site-zuhal.png': 'assets/img/site-zuhal.webp',
   'img/site-grandpride.png': 'assets/img/site-grandpride.webp',
   'img/site-jomventures.png': 'assets/img/site-jomventures.webp',
+  'img/site-kliniksiti.png': 'assets/img/site-kliniksiti.webp',
   'img/avatar-sheldon.png': 'assets/img/avatar-sheldon.webp',
   'img/avatar-boutique.jpeg': 'assets/img/avatar-boutique.webp',
   'img/avatar-diane.png': 'assets/img/avatar-diane.webp',
@@ -1487,7 +1488,7 @@ const titleCard = (s) => h('div', { style: { position: 'absolute', inset: 0, dis
   h('span', { style: { fontWeight: 800, fontSize: 24, letterSpacing: '-0.01em' } }, s.title, h('span', { style: { color: 'var(--flame)' } }, '.')),
   h('span', { style: { fontFamily: 'var(--font-mono)', fontSize: 11, color: 'rgba(255,255,255,.55)' } }, s.url));
 const SITES = [
-  { id: 'site-1', url: 'pferd.com.my', title: 'Pferd', meta: 'Equestrian Outfitters · Shah Alam', src: 'img/site-pferd-v2.png' },
+  { id: 'site-1', url: 'pferd.com.my', title: 'Pferd', meta: 'Equestrian Outfitters · Shah Alam', src: 'img/site-pferd-v2.png', noLink: true },
   { id: 'site-2', url: 'vastiqsolutions.com', href: 'https://www.vastiqsolutions.com/', title: 'Vastiq Solutions', meta: 'AI Security & Automation · Sri Kembangan', src: 'img/site-vastiq.png' },
   { id: 'site-5', url: 'aosis-mont-kiara.vercel.app', href: 'https://aosis-mont-kiara.vercel.app/', title: 'Aosis Mont Kiara', meta: 'Property Launch · Mont Kiara', src: 'img/site-aosis-v2.png' },
   { id: 'site-9', url: 'kirakaun.com', href: 'https://kirakaun.com/', title: 'KiraKaun', meta: 'Accounting SaaS · Malaysia', src: 'img/site-kirakaun.png' },
@@ -1499,7 +1500,7 @@ const SITES = [
 ];
 const siteItem = (s) => ({
   url: s.url, title: s.title, meta: s.meta,
-  href: s.href || ('https://' + s.url),
+  href: s.noLink ? undefined : (s.href || ('https://' + s.url)),
   slot: SHOTS[s.src] ? shot(s.src, s.title + ' homepage') : titleCard(s),
   slotClone: SHOTS[s.src] ? shot(s.src, '') : titleCard(s),
 });
